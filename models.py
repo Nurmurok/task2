@@ -1,10 +1,10 @@
 from peewee import *
 
 db = PostgresqlDatabase(
-    'mistery_shack',
+    'countries',
     host = 'localhost',
     port = '5432',
-    user = 'dipper',
+    user = 'superman',
     password = 'qwe123'
 )
 
@@ -14,11 +14,17 @@ class BaseModel(Model):
     class Meta:
         database = db
 
-class Monsters(BaseModel):
+class Data(BaseModel):
     name = CharField(max_length=255, null=False)
-    description = CharField(max_length=255, null=False)
-    weakness = CharField(max_length=255, null=False)
+    official_name = CharField(max_length=255, null=False)
+    capital = CharField(max_length=255, null=False)
+    region = CharField(max_length=255, null=False)
+    subregion = CharField(max_length=255, null=False)
+    population = IntegerField(null=False)
+    continents = CharField(max_length=255, null=False)
+    timezones = CharField(max_length=255, null=False)
+    flag = CharField()
 
 
-db.create_tables([Monsters])
+db.create_tables([Data])
 db.close()
