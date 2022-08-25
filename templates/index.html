@@ -20,9 +20,6 @@
 <link href="../static/main.d8e0d294.css" rel="stylesheet"></head>
 
 <body class="">
-
-
-
 <!-- Add your site or app content here -->
  
  <div class="container">
@@ -39,30 +36,31 @@
               <div class="col-md-8">
             <h1>  </h1>
             <h1>  </h1>
-            <h2>here you can find information about countries , i.e. name, official name, capital,region, sub region,population,continents,timezones,flags, etc.,</h2>
+            <h2>Here you can find information about countries , i.e. name, official name, capital,region, sub region,population,continents,timezones,flags, etc.,</h2>
 
               </div>
             </div>
           </div>
         </div>
 
+
         <div class="card">
           <div class="card-block">
             <h2>Countries</h2>
+            
             <div class="row">
               {% for country in data %}
               <div class="col-md-4">
                 <img src="{{ country.flag }}" class="img-responsive" alt="">
 
-                <h3 class="h5">{{ country.name }}</h3>
-                <h3 class="h5">{{ country.official_name }}</h3>
-                <h3 class="h5">{{ country.capital }}</h3>
-                <h3 class="h5">{{ country.region }}</h3>
-                <h3 class="h5">{{ country.subregion }}</h3>
-                <h3 class="h5">{{ country.population }}</h3>
-                <h3 class="h5">{{ country.continents }}</h3>
-                <h3 class="h5">{{ country.continents }}</h3>
-                <h3 class="h5">{{ country.timezones }}</h3>
+                <h3 class="h5">Name: {{ country.name }}</h3>
+                <h3 class="h5">Official name: {{ country.official_name }}</h3>
+                <h3 class="h5">Capital: {{ country.capital }}</h3>
+                <h3 class="h5">Region: {{ country.region }}</h3>
+                <h3 class="h5">Subregion: {{ country.subregion }}</h3>
+                <h3 class="h5">Population: {{ country.population }}</h3>
+                <h3 class="h5">Continents: {{ country.continents }}</h3>
+                <h3 class="h5">Timezones:{{ country.timezones }}</h3>
                
                 <p>August 2022</p>
               </div>
